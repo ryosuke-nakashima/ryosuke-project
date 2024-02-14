@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.section-faq__description dt {
+    position: relative; 
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+  
+  .section-faq__description dt::before, .section-faq__description dt::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+  }
+  .section-faq__description dt::before {
+    top: 12px;
+    right: 0;
+    transform: rotate(0deg);
+  }
+  .section-faq__description dt::after {
+    top: 12px;
+    right: 0;
+    transform: rotate(90deg);
+  }
+  
+  .section-faq__description dt.close::after {
+	  display: none;
+  }
+@media(min-width: 1040px) {
+  
+  .section-faq__description dt::before, .section-faq__description dt::after {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 2px;
+  }
+
+}

@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  color: #fff; 
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 400;
+  font-size: 1.6em;
+  line-height: 2.4rem;
+  overflow-x: hidden;
+  width: 100%;
+}
+section h2 {
+  font-size: 2.4rem;
+}
+.section-title {
+  font-size: 4.4rem;
+  font-family: 'Anton', sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  margin-bottom: 20px;
+  margin-top: 8px;
+	text-transform: uppercase;
+}
+@media(min-width: 1160px) {
+  .section-title {
+    font-size: 5.0rem;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+}
+a:hover {
+  color: #5dc7d0;
+}
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -100px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background-color: #5dc7d0;
+  border-radius: 50%;
+  transform: translate(0, 0);
+  transition: transform 0.1s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+  opacity: 0;
+}
+#stalker.active {
+  opacity: 1;
+}
+#stalker::before {
+  content: "Name\A Click";
+  white-space: pre;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  color: #fff;
+  position: absolute;
+  margin: auto;
+  top: 30px;
+  bottom: 0;
+  left: 30px;
+}
+.op_container {
+  background-color: #191a1b;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1001;
+}
+.op_logo {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 140px;
+  height: auto;
+}
+.op_name {
+  font-family: 'Anton', sans-serif;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.op_inner {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.op_text {
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.op_ber {
+  background-color: #fff;
+  margin-top: 5px;
+  width: 0%;
+  height: 1px;
+}
+@media(min-height: 844px) {
+  .op_logo {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 140px;
+    height: auto;
+  }
+  .op_name {
+    font-family: 'Anton', sans-serif;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .op_inner {
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media(min-width: 1160px) {
+  .op_logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    height: auto;
+  }
+  .op_name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3.4rem;
+  }
+  .op_inner {
+    width: 100%;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media(min-width: 1920px) {
+  .op_logo {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 250px;
+    height: auto;
+  }
+  .op_name {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 4.4rem;
+  }
+  .op_inner {
+    width: 100%;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .op_text {
+    color: #fff;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+.bg-main {
+  background: linear-gradient(180deg, #1b1b1b 0%, #2f2f2f 40%, #000000 100%), linear-gradient(135deg, rgba(252, 15, 192, 0.5) 0%, rgba(27, 27, 27, 0.8) 10%, rgba(27, 27, 27, 0.3) 90%, rgba(252, 15, 192, 0.5) 100%);
+  background: -webkit-linear-gradient(-90deg, #1b1b1b 0%, #2f2f2f 40%, #000000 100%), -webkit-linear-gradient(-45deg, rgba(252, 15, 192, 0.5) 0%, rgba(27, 27, 27, 0.8) 10%, rgba(27, 27, 27, 0.3) 90%, rgba(252, 15, 192, 0.5) 100%);
+  background-blend-mode: color-dodge;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media(min-width: 768px) {
+  .bg-main {
+    background: linear-gradient(180deg, #1b1b1b 0%, #2f2f2f 40%, #000000 100%), linear-gradient(135deg, rgba(252, 15, 192, 0.5) 0%, rgba(27, 27, 27, 0.8) 12%, rgba(27, 27, 27, 0.3) 88%, rgba(252, 15, 192, 0.5) 100%);
+    background: -webkit-linear-gradient(-90deg, #1b1b1b 0%, #2f2f2f 40%, #000000 100%), -webkit-linear-gradient(-45deg, rgba(252, 15, 192, 0.5) 0%, rgba(27, 27, 27, 0.8) 12%, rgba(27, 27, 27, 0.3) 88%, rgba(252, 15, 192, 0.5) 100%);
+    background-blend-mode: color-dodge;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
